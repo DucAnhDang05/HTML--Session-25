@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Nhap vao so nguyen duong n"); 
+        let a=b=1;
+        let count=2;
+        while (count < n) {
+                let temp = a + b;
+                a = b;
+                b = temp;
+                count ++;
+        }
+        console.log("So Fibonacci thu " + n + " la: " + b);
+    </script>
+</body>
+</html>

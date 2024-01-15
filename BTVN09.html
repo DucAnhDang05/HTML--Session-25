@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("Nhập vào số nguyên dương a");
+        let b = +prompt("Nhập vào số nguyên dương b");
+
+        if (a > 0 && b > 0) {
+            for (let i = a; i <= b; i++) {
+                let isUnique = 0;
+                let digits = [];
+
+                let temp = i;
+                while (temp > 0) {
+                    digits[digits.length] = temp % 10;
+                    temp = Math.floor(temp / 10);
+                }
+
+                for (let j = 0; j < digits.length - 1; j++) {
+                    for (let k = j + 1; k < digits.length; k++) {
+                        if (digits[j] === digits[k]) {
+                            isUnique = 1;
+                            break;
+                        }
+                    }
+                }
+                if (isUnique===0) {
+                    console.log(i);
+                }
+            }
+        } else {
+            console.log("Vui lòng nhập số nguyên dương.");
+        }
+    </script>
+
+</body>
+</html>
